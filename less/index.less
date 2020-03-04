@@ -1,1 +1,67 @@
 // Follow the order in the readme
+@import 'variables';
+@import 'mixins';
+@import 'reset'; 
+@import 'global';
+@import 'navigation';
+@import 'footer';
+@import 'home-page';
+
+.btn{
+    .button();
+}
+body{
+    @media @mobile{
+        max-width: 85%;
+        margin: auto;
+    }
+}
+
+.home{
+    .content-section{
+
+        .text-content{
+             @media @mobile{
+             width: 100%;
+            }
+        }
+
+        .img-content{
+                @media @mobile{
+                width: 100%;
+            }
+        }
+     
+    }
+
+   
+    .inverse-content{
+        @media @mobile{
+        flex-direction: column-reverse;
+        }
+
+        .img-content{
+             @media @mobile{
+            width: 100%;
+            }
+         }
+    }
+
+    .content-destination{
+        @media @mobile{
+        width: 100%;
+        }
+    }
+
+    .content-pick{
+        @media @mobile{
+        flex-direction: column;
+        }
+        .destination{
+            @media @mobile{
+            width: 95%;
+            }
+        }
+
+    }
+}
